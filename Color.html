@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Color Generator</title>
+  </head>
+  <body>
+    <h1>Color Generator</h1>
+    <label for="number1">Enter a number between 0 and 255:</label>
+    <input type="number" id="number1" min="0" max="255"><br>
+    <label for="number2">Enter another number between 0 and 255:</label>
+    <input type="number" id="number2" min="0" max="255"><br>
+    <button onclick="generateColor()">Generate Color</button><br>
+    <div id="colorBox"></div>
+    <script>
+      function generateColor() {
+        const number1 = document.getElementById("number1").value;
+        const number2 = document.getElementById("number2").value;
+        const color = `rgb(${number1}, ${number2}, 100)`;
+        document.getElementById("colorBox").style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>
